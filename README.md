@@ -1,3 +1,10 @@
+[![Travis Build Status][travis-img]][travis] [![codecov][codecov-img]][codecov]
+
+[travis]: https://travis-ci.com/devshop/csharp-model-to-builder
+[travis-img]: https://travis-ci.com/devshop/csharp-model-to-builder.svg?branch=master
+[codecov-img]: https://codecov.io/gh/devshop/csharp-model-to-builder/branch/master/graph/badge.svg
+[codecov]: https://codecov.io/gh/devshop/csharp-model-to-builder
+
 ![Banner](images/logo.png)
 
 # C# Model to Builder Class
