@@ -1,9 +1,11 @@
-[![Travis Build Status][travis-img]][travis] [![codecov][codecov-img]][codecov]
+[![Travis Build Status][travis-img]][travis] [![codecov][codecov-img]][codecov] [![Visual Studio Marketplace][vsmarket-img]][vsmarket]
 
 [travis]: https://travis-ci.com/devshop/csharp-model-to-builder
 [travis-img]: https://travis-ci.com/devshop/csharp-model-to-builder.svg?branch=master
 [codecov-img]: https://codecov.io/gh/devshop/csharp-model-to-builder/branch/master/graph/badge.svg
 [codecov]: https://codecov.io/gh/devshop/csharp-model-to-builder
+[vsmarket]: https://marketplace.visualstudio.com/items?itemName=frasercrosbie.csharp-model-to-builder
+[vsmarket-img]: https://vsmarketplacebadge.apphb.com/version/frasercrosbie.csharp-model-to-builder.svg
 
 ![Banner](images/logo.png)
 
