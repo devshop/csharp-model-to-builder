@@ -11,7 +11,7 @@ export const getModelDatatypes = (text: string, window: IWindow) => {
   text = text.replace(/virtual /g, '')
   // Find all the property types defined in the model
   // by looking for words after `public` but exclude `public class`
-  const datatypes = text.match(/(?<=public\s)(?!class)[\w\?\[\]]+/g)
+  const datatypes = text.match(/(?<=public\s)(?!class)[\w\?\<\>\[\]]+/g)
   if (!datatypes) {
     window.showErrorMessage(
       'Could not find any datatypes defined in the model.'

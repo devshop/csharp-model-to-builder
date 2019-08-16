@@ -11,7 +11,7 @@ namespace MyProject.Models
     private long _departmentId = 0;
     private Department _department = null;
     private Role _role = null;
-    private IList _skills = null;
+    private IList<Skill> _skills = new List<Skill>();
 
     public User Build() =>
       new User
@@ -68,7 +68,7 @@ namespace MyProject.Models
       return this;
     }
 
-    public UserBuilder WithSkills(IList value)
+    public UserBuilder WithSkills(IList<Skill> value)
     {
       _skills = value;
       return this;

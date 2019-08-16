@@ -59,6 +59,9 @@ export const getInitalPropertyValue = (datatype: string) => {
     case 'DateTime[]':
       return 'new DateTime[]{ new DateTime(1970, 1, 1) }'
     default:
+      if (datatype.match(/<\w+\>/)) {
+        return `new List<${datatype.match(/(?<=<)[\w]+/)}>()`
+      }
       return null
   }
 }

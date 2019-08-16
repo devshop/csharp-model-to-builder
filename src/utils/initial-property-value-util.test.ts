@@ -123,6 +123,10 @@ describe('Initial Property Value Util', () => {
     )
   })
 
+  it('should return the inital property value of `new List<Foo>()` when the datatype is a IList<Foo>', () => {
+    expect(getInitalPropertyValue('IList<Foo>')).toBe('new List<Foo>()')
+  })
+
   it('should return the inital property value of `null` when the datatype is a unknown', () => {
     expect(getInitalPropertyValue('foo')).toBe(null)
   })
