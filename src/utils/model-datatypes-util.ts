@@ -7,6 +7,8 @@ import { IWindow } from '../interfaces/window.interface'
  * @param window    The VSCode Window
  */
 export const getModelDatatypes = (text: string, window: IWindow) => {
+  // Strip out `virtual ` keyword
+  text = text.replace(/virtual /g, '')
   // Find all the property types defined in the model
   // by looking for words after `public` but exclude `public class`
   const datatypes = text.match(/(?<=public\s)(?!class)[\w\?\[\]]+/g)

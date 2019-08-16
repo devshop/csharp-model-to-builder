@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using Enums;
 
 namespace MyProject.Models
 {
@@ -11,5 +13,13 @@ namespace MyProject.Models
       public string Email { get; set; }
 
       public DateTime DateOfBirth { get; set; }   
+
+      public long DepartmentId { get; set; }   
+
+      public virtual Department Department { get; set; }
+
+      public Role Role { get; set; }
+
+      public virtual IList<Skill> Skills { get; set; } = new List<Skill>();
     }
 }

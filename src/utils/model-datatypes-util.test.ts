@@ -27,4 +27,19 @@ describe('Model Datatypes Util', () => {
     expect(datatypes).toEqual(['string', 'int'])
     expect(windowMock.showErrorMessage).not.toHaveBeenCalled()
   })
+
+  it('should remove the `virtual` keyword', () => {
+    const windowMock = {
+      showErrorMessage: jest.fn()
+    }
+    const datatypes = getModelDatatypes(
+      `public class TestModel {
+        public long DepartmentId { get; set; }
+        public virtual Department Department { get; set; }
+      }`,
+      windowMock as any
+    )
+    expect(datatypes).toEqual(['long', 'Department'])
+    expect(windowMock.showErrorMessage).not.toHaveBeenCalled()
+  })
 })
