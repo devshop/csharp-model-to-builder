@@ -9,3 +9,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [0.1.0] - 2019-06-28
 
 - Initial release
+
+## [0.1.1] - 2019-08-16
+
+### Fixed
+- Fixed issue when "virtual" keyword is used
+- Fixed issue with IList<>
