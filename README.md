@@ -1,4 +1,4 @@
-[![Travis Build Status][travis-img]][travis] [![codecov][codecov-img]][codecov] [![Visual Studio Marketplace][vsmarket-img]][vsmarket]
+[![Travis Build Status][travis-img]][travis] [![codecov][codecov-img]][codecov] [![Visual Studio Marketplace][vsmarket-img]][vsmarket] [![Dependencies Status][david-dm-img]][david-dm]
 
 [travis]: https://travis-ci.com/devshop/csharp-model-to-builder
 [travis-img]: https://travis-ci.com/devshop/csharp-model-to-builder.svg?branch=master
@@ -6,6 +6,8 @@
 [codecov]: https://codecov.io/gh/devshop/csharp-model-to-builder
 [vsmarket]: https://marketplace.visualstudio.com/items?itemName=frasercrosbie.csharp-model-to-builder
 [vsmarket-img]: https://vsmarketplacebadge.apphb.com/version/frasercrosbie.csharp-model-to-builder.svg
+[david-dm]: https://david-dm.org/devshop/csharp-model-to-builder?type=dev
+[david-dm-img]: https://david-dm.org/devshop/csharp-model-to-builder/dev-status.svg
 
 ![Banner](images/logo.png)
 
