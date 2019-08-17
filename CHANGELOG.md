@@ -15,3 +15,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Fixed
 - Fixed issue when "virtual" keyword is used
 - Fixed issue with IList<>
+
+## [0.1.2] - 2019-08-16
+
+### Fixed
+- Fixed issue when "abstract" class is used
+
+### Added
+- Added support for Guid datatype
