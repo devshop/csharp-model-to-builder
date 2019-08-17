@@ -61,6 +61,10 @@ describe('Initial Property Value Util', () => {
     expect(getInitalPropertyValue('DateTime')).toBe('new DateTime(1970, 1, 1)')
   })
 
+  it('should return the inital property value of `Guid.NewGuid()` when the datatype is a Guid', () => {
+    expect(getInitalPropertyValue('Guid')).toBe('Guid.NewGuid()')
+  })
+
   it('should return the inital property value of `new string[]{ "" }` when the datatype is a string[]', () => {
     expect(getInitalPropertyValue('string[]')).toBe('new string[]{ "" }')
   })

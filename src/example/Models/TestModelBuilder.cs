@@ -19,6 +19,7 @@ namespace Test
     private bool _boolTest = false;
     private char _charTest = 'X';
     private DateTime _dateTimeTest = new DateTime(1970, 1, 1);
+    private Guid _guidTest = Guid.NewGuid();
     private sbyte? _sByteNullableTest = null;
     private byte? _byteNullableTest = null;
     private short? _shortNullableTest = null;
@@ -53,6 +54,7 @@ namespace Test
     private SomeType _someTypeTest = null;
     private SomeType? _someTypeNullableTest = null;
     private SomeType[] _someTypeArrayTest = null;
+    private IList<SomeType> _listTest = new List<SomeType>();
 
     public TestModel Build() =>
       new TestModel
@@ -72,6 +74,7 @@ namespace Test
         BoolTest = _boolTest,
         CharTest = _charTest,
         DateTimeTest = _dateTimeTest,
+        GuidTest = _guidTest,
         SByteNullableTest = _sByteNullableTest,
         ByteNullableTest = _byteNullableTest,
         ShortNullableTest = _shortNullableTest,
@@ -105,7 +108,8 @@ namespace Test
         DateTimeArrayTest = _dateTimeArrayTest,
         SomeTypeTest = _someTypeTest,
         SomeTypeNullableTest = _someTypeNullableTest,
-        SomeTypeArrayTest = _someTypeArrayTest
+        SomeTypeArrayTest = _someTypeArrayTest,
+        ListTest = _listTest
       };
 
     public TestModelBuilder WithStringTest(string value)
@@ -195,6 +199,12 @@ namespace Test
     public TestModelBuilder WithDateTimeTest(DateTime value)
     {
       _dateTimeTest = value;
+      return this;
+    }
+
+    public TestModelBuilder WithGuidTest(Guid value)
+    {
+      _guidTest = value;
       return this;
     }
 
@@ -399,6 +409,12 @@ namespace Test
     public TestModelBuilder WithSomeTypeArrayTest(SomeType[] value)
     {
       _someTypeArrayTest = value;
+      return this;
+    }
+
+    public TestModelBuilder WithListTest(IList<SomeType> value)
+    {
+      _listTest = value;
       return this;
     }
   }

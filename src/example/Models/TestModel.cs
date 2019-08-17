@@ -19,6 +19,7 @@ namespace Test
         public bool BoolTest { get; set; }
         public char CharTest { get; set; }
         public DateTime DateTimeTest { get; set; }
+        public Guid GuidTest { get; set; }
         public sbyte? SByteNullableTest { get; set; }
         public byte? ByteNullableTest { get; set; }
         public short? ShortNullableTest { get; set; }
@@ -49,9 +50,10 @@ namespace Test
         public bool?[] BoolArrayNullableTest { get; set; }
         public char[] CharArrayTest { get; set; }
         public char?[] CharArrayNullableTest { get; set; }
-        public DateTime[] DateTimeArrayTest { get; set; }        
+        public DateTime[] DateTimeArrayTest { get; set; }
         public SomeType SomeTypeTest { get; set; }
         public SomeType? SomeTypeNullableTest { get; set; }
         public SomeType[] SomeTypeArrayTest { get; set; }
+        public virtual IList<SomeType> ListTest { get; set; } = new List<SomeType>();
     }
 }

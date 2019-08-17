@@ -28,6 +28,8 @@ export const getInitalPropertyValue = (datatype: string) => {
       return "'X'"
     case 'DateTime':
       return 'new DateTime(1970, 1, 1)'
+    case 'Guid':
+      return 'Guid.NewGuid()'
     case 'string[]':
       return 'new string[]{ "" }'
     case 'sbyte[]':
