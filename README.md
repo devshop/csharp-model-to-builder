@@ -6,7 +6,7 @@
 [codecov]: https://codecov.io/gh/devshop/csharp-model-to-builder
 [vsmarket]: https://marketplace.visualstudio.com/items?itemName=frasercrosbie.csharp-model-to-builder
 [vsmarket-img]: https://vsmarketplacebadge.apphb.com/version/frasercrosbie.csharp-model-to-builder.svg
-[david-dm]: https://david-dm.org/devshop/csharp-model-to-builder
+[david-dm]: https://david-dm.org/devshop/csharp-model-to-builder?type=dev
 [david-dm-img]: https://david-dm.org/devshop/csharp-model-to-builder/dev-status.svg
 
 ![Banner](images/logo.png)
