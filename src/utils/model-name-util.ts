@@ -7,6 +7,8 @@ import { IWindow } from '../interfaces/window.interface'
  * @param window    The VSCode Window
  */
 export const getModelName = (text: string, window: IWindow) => {
+  // Strip out `abstract ` modifier
+  text = text.replace(/abstract /g, '')
   // Search for the first word after "public class" to find the name of the model.
   const modelNames = text.match(/(?<=\bpublic class\s)(\w+)/)
   if (!modelNames) {
