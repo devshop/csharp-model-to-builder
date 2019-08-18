@@ -11,7 +11,7 @@ import {
 import { IPropertyOutput } from './interfaces/property-output.interface'
 import { IWindow } from './interfaces/window.interface'
 import { getInitalPropertyValue } from './utils/initial-property-value-util'
-import { getModelDatatypes } from './utils/model-datatypes-util'
+import { getModelDataTypes } from './utils/model-data-types-util'
 import { getModelName } from './utils/model-name-util'
 import { getModelProperties } from './utils/model-properties-util'
 import { getNamespace } from './utils/namespace-util'
@@ -31,12 +31,12 @@ export const execute = (workspaceRoot: string, window: IWindow) => {
   const modelName = getModelName(text, window)
   if (!modelName) return
   const properties = getModelProperties(text, window)
-  const datatypes = getModelDatatypes(text, window)
-  if (!properties || !datatypes) return
+  const dataTypes = getModelDataTypes(text, window)
+  if (!properties || !dataTypes) return
   const propertyOutput = generatePropertyOutput(
     modelName,
     properties,
-    datatypes
+    dataTypes
   )
   const classString = generateClass(namespace, modelName, propertyOutput)
   saveBuilderFile(window, editor, classString)
@@ -73,7 +73,7 @@ export const generateClass = (
 export const generatePropertyOutput = (
   modelName: string,
   properties: string[],
-  datatypes: string[]
+  dataTypes: string[]
 ): IPropertyOutput => {
   const output: IPropertyOutput = {
     definitions: [],
@@ -83,15 +83,15 @@ export const generatePropertyOutput = (
   properties.forEach((p, i) => {
     const t = indent
     const b = lineBreak
-    const datatype = datatypes[i]
-    const value = getInitalPropertyValue(datatype)
+    const dataType = dataTypes[i]
+    const value = getInitalPropertyValue(dataType)
     let lowercaseProp = lowercaseFirstLetter(p)
-    output.definitions.push(`private ${datatype} _${lowercaseProp} = ${value};`)
+    output.definitions.push(`private ${dataType} _${lowercaseProp} = ${value};`)
     // Strip any '?' from optional properties
     lowercaseProp = lowercaseProp.replace('?', '')
     output.localSetters.push(`${p} = _${lowercaseProp}`)
     let propertyExternalSetter = ''
-    propertyExternalSetter += `public ${modelName}Builder With${p}(${datatype} value)${b}`
+    propertyExternalSetter += `public ${modelName}Builder With${p}(${dataType} value)${b}`
     propertyExternalSetter += `${t}${t}{${b}`
     propertyExternalSetter += `${t}${t}${t}_${lowercaseProp} = value;${b}`
     propertyExternalSetter += `${t}${t}${t}return this;${b}`

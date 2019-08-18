@@ -22,4 +22,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Fixed issue when "abstract" class is used
 
 ### Added
-- Added support for Guid datatype
+- Added support for Guid data type

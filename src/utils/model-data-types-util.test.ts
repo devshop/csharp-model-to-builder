@@ -1,11 +1,11 @@
-import { getModelDatatypes } from './model-datatypes-util'
+import { getModelDataTypes } from './model-data-types-util'
 
 describe('Model Datatypes Util', () => {
-  it('should return null and an error message if no datatypes are found in the file', () => {
+  it('should return null and an error message if no data types are found in the file', () => {
     const windowMock = {
       showErrorMessage: jest.fn()
     }
-    const datatypes = getModelDatatypes(
+    const datatypes = getModelDataTypes(
       'public class TestModel{}}',
       windowMock as any
     )
@@ -13,11 +13,11 @@ describe('Model Datatypes Util', () => {
     expect(windowMock.showErrorMessage).toHaveBeenCalled()
   })
 
-  it('should return a list of datatypes and no error message if datatypes are found in the file', () => {
+  it('should return a list of datatypes and no error message if data types are found in the file', () => {
     const windowMock = {
       showErrorMessage: jest.fn()
     }
-    const datatypes = getModelDatatypes(
+    const datatypes = getModelDataTypes(
       `public class TestModel {
         public string Foo { get; set; }
         public int Bar { get; set; }
@@ -32,7 +32,7 @@ describe('Model Datatypes Util', () => {
     const windowMock = {
       showErrorMessage: jest.fn()
     }
-    const datatypes = getModelDatatypes(
+    const datatypes = getModelDataTypes(
       `public class TestModel {
         public long DepartmentId { get; set; }
         public virtual Department Department { get; set; }

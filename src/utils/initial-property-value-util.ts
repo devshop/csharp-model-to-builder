@@ -1,10 +1,10 @@
 /**
- * Determines the default value to set the builder property to, based on the provided interface datatype.
+ * Determines the default value to set the builder property to, based on the provided interface data type.
  *
- * @param datatype The datatype of the property (e.g. number)
+ * @param dataType The data type of the property (e.g. number)
  */
-export const getInitalPropertyValue = (datatype: string) => {
-  switch (datatype) {
+export const getInitalPropertyValue = (dataType: string) => {
+  switch (dataType) {
     case 'string':
       return '""'
     case 'sbyte':
@@ -61,8 +61,8 @@ export const getInitalPropertyValue = (datatype: string) => {
     case 'DateTime[]':
       return 'new DateTime[]{ new DateTime(1970, 1, 1) }'
     default:
-      if (datatype.match(/<\w+\>/)) {
-        return `new List<${datatype.match(/(?<=<)[\w]+/)}>()`
+      if (dataType.match(/<\w+\>/)) {
+        return `new List<${dataType.match(/(?<=<)[\w]+/)}>()`
       }
       return null
   }
