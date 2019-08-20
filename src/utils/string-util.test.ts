@@ -6,7 +6,13 @@ describe('String Util', () => {
   })
 
   it('should lowercase the first letter of a word', () => {
-    const word = lowercaseFirstLetter('FooBar')
+    // Arrange
+    const text = 'FooBar'
+
+    // Act
+    const word = lowercaseFirstLetter(text)
+
+    // Assert
     expect(word).toBe('fooBar')
   })
 })

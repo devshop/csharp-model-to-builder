@@ -2,136 +2,398 @@ import { getInitalPropertyValue } from './initial-property-value-util'
 
 describe('Initial Property Value Util', () => {
   it('should return the inital property value of `""` when the data type is a string', () => {
-    expect(getInitalPropertyValue('string')).toBe('""')
+    // Arrange
+    const dataType = 'string'
+    const expectedValue = '""'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `0` when the data type is a sbyte', () => {
-    expect(getInitalPropertyValue('sbyte')).toBe(0)
+    // Arrange
+    const dataType = 'sbyte'
+    const expectedValue = 0
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `0` when the data type is a byte', () => {
-    expect(getInitalPropertyValue('byte')).toBe(0)
+    // Arrange
+    const dataType = 'byte'
+    const expectedValue = 0
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `0` when the data type is a short', () => {
-    expect(getInitalPropertyValue('short')).toBe(0)
+    // Arrange
+    const dataType = 'short'
+    const expectedValue = 0
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `0` when the data type is a ushort', () => {
-    expect(getInitalPropertyValue('ushort')).toBe(0)
+    // Arrange
+    const dataType = 'ushort'
+    const expectedValue = 0
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `0` when the data type is a int', () => {
-    expect(getInitalPropertyValue('int')).toBe(0)
+    // Arrange
+    const dataType = 'int'
+    const expectedValue = 0
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `0` when the data type is a uint', () => {
-    expect(getInitalPropertyValue('uint')).toBe(0)
+    // Arrange
+    const dataType = 'uint'
+    const expectedValue = 0
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `0` when the data type is a long', () => {
-    expect(getInitalPropertyValue('long')).toBe(0)
+    // Arrange
+    const dataType = 'long'
+    const expectedValue = 0
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `0` when the data type is a ulong', () => {
-    expect(getInitalPropertyValue('ulong')).toBe(0)
+    // Arrange
+    const dataType = 'ulong'
+    const expectedValue = 0
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `0.0f` when the data type is a float', () => {
-    expect(getInitalPropertyValue('float')).toBe('0.0f')
+    // Arrange
+    const dataType = 'float'
+    const expectedValue = '0.0f'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `0.0` when the data type is a double', () => {
-    expect(getInitalPropertyValue('double')).toBe('0.0')
+    // Arrange
+    const dataType = 'double'
+    const expectedValue = '0.0'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `0.0m` when the data type is a decimal', () => {
-    expect(getInitalPropertyValue('decimal')).toBe('0.0m')
+    // Arrange
+    const dataType = 'decimal'
+    const expectedValue = '0.0m'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `false` when the data type is a bool', () => {
-    expect(getInitalPropertyValue('bool')).toBe(false)
+    // Arrange
+    const dataType = 'bool'
+    const expectedValue = false
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `X` when the data type is a char', () => {
-    expect(getInitalPropertyValue('char')).toBe("'X'")
+    // Arrange
+    const dataType = 'char'
+    const expectedValue = "'X'"
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `new DateTime(1970, 1, 1)` when the data type is a DateTime', () => {
-    expect(getInitalPropertyValue('DateTime')).toBe('new DateTime(1970, 1, 1)')
+    // Arrange
+    const dataType = 'DateTime'
+    const expectedValue = 'new DateTime(1970, 1, 1)'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `Guid.NewGuid()` when the data type is a Guid', () => {
-    expect(getInitalPropertyValue('Guid')).toBe('Guid.NewGuid()')
+    // Arrange
+    const dataType = 'Guid'
+    const expectedValue = 'Guid.NewGuid()'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `new string[]{ "" }` when the data type is a string[]', () => {
-    expect(getInitalPropertyValue('string[]')).toBe('new string[]{ "" }')
+    // Arrange
+    const dataType = 'string[]'
+    const expectedValue = 'new string[]{ "" }'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `new sbyte[]{ 0 }` when the data type is a sbyte[]', () => {
-    expect(getInitalPropertyValue('sbyte[]')).toBe('new sbyte[]{ 0 }')
+    // Arrange
+    const dataType = 'sbyte[]'
+    const expectedValue = 'new sbyte[]{ 0 }'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `new byte[]{ 0 }` when the data type is a byte[]', () => {
-    expect(getInitalPropertyValue('byte[]')).toBe('new byte[]{ 0 }')
+    // Arrange
+    const dataType = 'byte[]'
+    const expectedValue = 'new byte[]{ 0 }'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `new short[]{ 0 }` when the data type is a short[]', () => {
-    expect(getInitalPropertyValue('short[]')).toBe('new short[]{ 0 }')
+    // Arrange
+    const dataType = 'short[]'
+    const expectedValue = 'new short[]{ 0 }'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `new ushort[]{ 0 }` when the data type is a ushort[]', () => {
-    expect(getInitalPropertyValue('ushort[]')).toBe('new ushort[]{ 0 }')
+    // Arrange
+    const dataType = 'ushort[]'
+    const expectedValue = 'new ushort[]{ 0 }'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `new int[]{ 0 }` when the data type is an int[]', () => {
-    expect(getInitalPropertyValue('int[]')).toBe('new int[]{ 0 }')
+    // Arrange
+    const dataType = 'int[]'
+    const expectedValue = 'new int[]{ 0 }'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `new uint[]{ 0 }` when the data type is a uint[]', () => {
-    expect(getInitalPropertyValue('uint[]')).toBe('new uint[]{ 0 }')
+    // Arrange
+    const dataType = 'uint[]'
+    const expectedValue = 'new uint[]{ 0 }'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `new long[]{ 0 }` when the data type is a long[]', () => {
-    expect(getInitalPropertyValue('long[]')).toBe('new long[]{ 0 }')
+    // Arrange
+    const dataType = 'long[]'
+    const expectedValue = 'new long[]{ 0 }'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `new ulong[]{ 0 }` when the data type is a ulong[]', () => {
-    expect(getInitalPropertyValue('ulong[]')).toBe('new ulong[]{ 0 }')
+    // Arrange
+    const dataType = 'ulong[]'
+    const expectedValue = 'new ulong[]{ 0 }'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `new float[]{ 0.0f }` when the data type is a float[]', () => {
-    expect(getInitalPropertyValue('float[]')).toBe('new float[]{ 0.0f }')
+    // Arrange
+    const dataType = 'float[]'
+    const expectedValue = 'new float[]{ 0.0f }'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `new double[]{ 0.0 }` when the data type is a double[]', () => {
-    expect(getInitalPropertyValue('double[]')).toBe('new double[]{ 0.0 }')
+    // Arrange
+    const dataType = 'double[]'
+    const expectedValue = 'new double[]{ 0.0 }'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `new decimal[]{ 0.0m }` when the data type is a decimal[]', () => {
-    expect(getInitalPropertyValue('decimal[]')).toBe('new decimal[]{ 0.0m }')
+    // Arrange
+    const dataType = 'decimal[]'
+    const expectedValue = 'new decimal[]{ 0.0m }'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `new bool[]{ false }` when the data type is a bool[]', () => {
-    expect(getInitalPropertyValue('bool[]')).toBe('new bool[]{ false }')
+    // Arrange
+    const dataType = 'bool[]'
+    const expectedValue = 'new bool[]{ false }'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it("should return the inital property value of `new char[]{ 'X' }` when the data type is a char[]", () => {
-    expect(getInitalPropertyValue('char[]')).toBe("new char[]{ 'X' }")
+    // Arrange
+    const dataType = 'char[]'
+    const expectedValue = "new char[]{ 'X' }"
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `new DateTime[]{ new DateTime(1970, 1, 1) }` when the data type is a DateTime[]', () => {
-    expect(getInitalPropertyValue('DateTime[]')).toBe(
-      'new DateTime[]{ new DateTime(1970, 1, 1) }'
-    )
+    // Arrange
+    const dataType = 'DateTime[]'
+    const expectedValue = 'new DateTime[]{ new DateTime(1970, 1, 1) }'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `new List<Foo>()` when the data type is a IList<Foo>', () => {
-    expect(getInitalPropertyValue('IList<Foo>')).toBe('new List<Foo>()')
+    // Arrange
+    const dataType = 'IList<Foo>'
+    const expectedValue = 'new List<Foo>()'
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 
   it('should return the inital property value of `null` when the data type is a unknown', () => {
-    expect(getInitalPropertyValue('foo')).toBe(null)
+    // Arrange
+    const dataType = 'foo>'
+    const expectedValue = null
+
+    // Act
+    const value = getInitalPropertyValue(dataType)
+
+    // Assert
+    expect(value).toBe(expectedValue)
   })
 })
