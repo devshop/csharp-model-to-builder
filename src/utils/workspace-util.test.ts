@@ -43,7 +43,7 @@ describe('Workspace Util', () => {
     const loaded = isWorkspaceLoaded(workspaceRoot, windowMock as any)
 
     // Assert
-    expect(loaded).toBe(false)
+    expect(loaded).toBeFalsy()
     expect(windowMock.showErrorMessage).toHaveBeenCalled()
   })
 
@@ -58,7 +58,7 @@ describe('Workspace Util', () => {
     const loaded = isWorkspaceLoaded(workspaceRoot, windowMock as any)
 
     // Assert
-    expect(loaded).toBe(true)
+    expect(loaded).toBeTruthy()
     expect(windowMock.showErrorMessage).not.toHaveBeenCalled()
   })
 
@@ -73,7 +73,7 @@ describe('Workspace Util', () => {
     const open = isTextEditorOpen(windowMock as any)
 
     // Assert
-    expect(open).toBe(false)
+    expect(open).toBeFalsy()
     expect(windowMock.showErrorMessage).toHaveBeenCalled()
   })
 
@@ -88,7 +88,7 @@ describe('Workspace Util', () => {
     const open = isTextEditorOpen(windowMock as any)
 
     // Assert
-    expect(open).toBe(true)
+    expect(open).toBeTruthy()
     expect(windowMock.showErrorMessage).not.toHaveBeenCalled()
   })
 
@@ -103,7 +103,7 @@ describe('Workspace Util', () => {
     const textInEditor = isTextInEditor(text, windowMock as any)
 
     // Assert
-    expect(textInEditor).toBe(false)
+    expect(textInEditor).toBeFalsy()
     expect(windowMock.showErrorMessage).toHaveBeenCalled()
   })
 
@@ -118,7 +118,7 @@ describe('Workspace Util', () => {
     const textInEditor = isTextInEditor(text, windowMock as any)
 
     // Assert
-    expect(textInEditor).toBe(true)
+    expect(textInEditor).toBeTruthy()
     expect(windowMock.showErrorMessage).not.toHaveBeenCalled()
   })
 })
